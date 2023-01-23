@@ -1,0 +1,44 @@
+{
+  "name": "shoreside-launcher",
+  "version": "1.3.1",
+  "description": "Shoreside's launcher",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "xeplosion <xeplosion@xegames.online> (https://xegames.online/)",
+  "license": "BSD-3-clause",
+  "build": {
+    "nwVeriosn": "0.69.1",
+    "output": "./dist/", 
+    "packed": true,
+    "outputPattern": "${NAME}-${VERSION}-${PLATFORM}-${ARCH}",
+    "appid": "io.github.nwjs.${ name }",
+    "stripped properties": [
+      "build",
+      "chromium-args"
+    ],
+    "win": {
+      "productName": "Shoreside",
+      "company name": "Xeplosion Games",
+      "fileDescription": "A 2D Island Farming Simulator",
+      "copywright": "Xeplosion Games Corp.",
+      "productVersion": "0.1.0",
+      "icon": "./src/assets/images/shoreside.ico"
+    },
+    "mac": {
+      "name": "Shoreside",
+      "displayName": "Shoreside",
+      "version": "0.1.0",
+      "description": "A 2D Island Farming Simulator",
+      "copyright": "Xeplosion Games Corp.",
+      "icon": "./src/assets/images/shoreside.ico"
+    },
+    "nsis": {
+      "icon": "./src/assets/images/shoreside.ico",
+      "installDirectory": "$LOCALAPPDATA\\${_APPNAME}",
+      "difUpdaters": true
+    }
+  }
+}
